@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>List employees</h2>          
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Name</th>
+          <th>eag</th>
+          <th>imgUrl</th>
+          <th>status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let em of employees">
+          <td>{{em.id}}</td>
+          <td>{{em.Name}}</td>
+          <td>{{em.age}}</td>
+          <td>{{em.imgUrl}}</td>
+          <td>{{em.status}}</td>
+          <button class="btn btn-primary" type="button" [routerLink] = "['/Employees-Detail',em.id]">Detail</button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
