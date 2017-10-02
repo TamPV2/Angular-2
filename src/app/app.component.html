@@ -20,10 +20,10 @@
                 <li>
                     <a routerLink="employees"  routerLinkActive="active">Employee list</a>
                 </li>
-                <li>
+                <li *ngIf = "!isLoggedIn">
                     <a routerLink="login"  routerLinkActive="active">Login</a>
                 </li>
-                <li>
+                <li *ngIf = "isLoggedIn">
                     <a (click) = "Logout()">Logout</a>
                 </li>
             </ul>

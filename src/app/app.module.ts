@@ -28,7 +28,7 @@ import {CheckLoginSaveGuard} from '../guards/check-login-save.guards';
     appRoutes,
     FormsModule
   ],
-  providers: [EmployeesService, LoginService, CheckLoginGuard, CheckLoginSaveGuard],
+  providers: [EmployeesService, LoginService, CheckLoginGuard, CheckLoginSaveGuard, LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
