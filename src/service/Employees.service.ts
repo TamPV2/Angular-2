@@ -21,4 +21,7 @@ export class EmployeesService {
   Add(data: any): Observable<any> { // add
     return this._http.post(this.apiUrl, data).map((response: Response) => response.json());
   }
+  Delete(id: number): Observable<any> { // add
+    return this._http.delete(this.apiUrl + '/' + id).map((response: Response) => response.json());
+  }
 }

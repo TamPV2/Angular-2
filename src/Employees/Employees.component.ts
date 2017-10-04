@@ -14,13 +14,28 @@ export class EmployeesComponent implements OnInit {
     constructor(private employeService: EmployeesService, private aa: AppComponent) {
     }
     ngOnInit(): void {
+        this.load();
+    }
+    getID(value) {
+        this.aa.layqua = value;
+    }
+    Delete(id: number) {
+        // tslint:disable-next-line:prefer-const
+        let confirmResult = confirm('Are you sure to delete?');
+        if (confirmResult) {
+            this.employeService.Delete(id).subscribe(response => {
+                if (response) {
+                    alert('Delete success');
+                    this.load();
+                }
+            });
+        }
+    }
+    load() {
         this.employeService.GetList().subscribe((response: any) => {
             this.employees = response;
             console.log(this.employees);
         });
-    }
-    getID(value) {
-        this.aa.layqua = value;
     }
 }
 

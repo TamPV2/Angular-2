@@ -25,8 +25,9 @@
           <td>{{em.age}}</td>
           <td>{{em.imgUrl}}</td>
           <td>{{em.status}}</td>
-          <button class="btn btn-primary pull-left" type="button" (click) = getID(em.id) [routerLink] = "['/Employees-Detail',em.id]">Detail</button>
-          <button class="btn btn-danger pull-left" type="button" (click) = getID(em.id) [routerLink] = "['/Employees-Edit',em.id]">Edit</button>
+          <button class="btn btn-primary " type="button" (click) = getID(em.id) [routerLink] = "['/Employees-Detail',em.id]">Detail</button>
+          <button class="btn btn-warning " type="button" (click) = getID(em.id) [routerLink] = "['/Employees-Edit',em.id]">Edit</button>
+          <button class="btn btn-danger" type="button" (click) = "Delete(em.id)" >Delete</button>
         </tr>
       </tbody>
     </table>
