@@ -11,6 +11,7 @@ import { AppComponent } from '../app/app.component';
 export class EmployeesComponent implements OnInit {
     public employees: any[];
     public pages: number[];
+    public keysearch: string;
     constructor(private employeService: EmployeesService, private aa: AppComponent) {
     }
     ngOnInit(): void {
@@ -33,6 +34,18 @@ export class EmployeesComponent implements OnInit {
     }
     load() {
         this.employeService.GetList().subscribe((response: any) => {
+            this.employees = response;
+            console.log(this.employees);
+        });
+    }
+    Search() {
+        this.employeService.Find( this.keysearch ).subscribe((response: any) => {
+            this.employees = response;
+            console.log(this.employees);
+        });
+    }
+    saverange() {
+        this.employeService.Find( this.keysearch ).subscribe((response: any) => {
             this.employees = response;
             console.log(this.employees);
         });

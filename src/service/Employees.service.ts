@@ -12,6 +12,9 @@ export class EmployeesService {
   GetList(): Observable<any[]> {
     return this._http.get(this.apiUrl).map((reponse: Response) => reponse.json());
   }
+  Find(keysearch: string): Observable<any[]> {
+    return this._http.get(this.apiUrl + '?search=' + keysearch).map((reponse: Response) => reponse.json());
+  }
   GetSingle(id: number): Observable<any> { // get detail
     return this._http.get(this.apiUrl + '/' + id).map((response: Response) => response.json());
   }

@@ -17,7 +17,7 @@ const routing: Routes = [
     {path: 'Employees-Edit/:id', component: EmployeesEditComponent},
     {path: 'Employees-AddNew', component: EmployeesAddComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'Employees-Detail/:id', component: EmployeeDetailComponent // , canDeactivate: [CheckLoginSaveGuard]
+    {path: 'Employees-Detail/:id', component: EmployeeDetailComponent// , canDeactivate: [CheckLoginSaveGuard]
     , children: [
         {path: 'overview', component: EmployeeOverviewComponent},
         {path: 'project', component: EmployeeProjectComponent}
