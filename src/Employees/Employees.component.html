@@ -18,7 +18,7 @@
           <td>{{em.age}}</td>
           <td>{{em.imgUrl}}</td>
           <td>{{em.status}}</td>
-          <button class="btn btn-primary" type="button" [routerLink] = "['/Employees-Detail',em.id]">Detail</button>
+          <button class="btn btn-primary" type="button" (click) = getID(em.id) [routerLink] = "['/Employees-Detail',em.id]">Detail</button>
         </tr>
       </tbody>
     </table>

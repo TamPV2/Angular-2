@@ -16,11 +16,12 @@ import { FormsModule } from '@angular/forms';
 import {LoginService} from '../service/Login.Service';
 import {CheckLoginGuard} from '../guards/check-login.guard';
 import {CheckLoginSaveGuard} from '../guards/check-login-save.guards';
+import { TestComponent} from '../app/test.component';
 
 @NgModule({
   declarations: [
     AppComponent, EmployeesComponent, HomeComponent, EmployeeDetailComponent, NotFoundComponent,
-    EmployeeOverviewComponent, EmployeeProjectComponent, LoginComponent
+    EmployeeOverviewComponent, EmployeeProjectComponent, LoginComponent, TestComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +29,7 @@ import {CheckLoginSaveGuard} from '../guards/check-login-save.guards';
     appRoutes,
     FormsModule
   ],
-  providers: [EmployeesService, LoginService, CheckLoginGuard, CheckLoginSaveGuard, LoginComponent],
+  providers: [EmployeesService, LoginService, CheckLoginGuard, CheckLoginSaveGuard, LoginComponent, TestComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
