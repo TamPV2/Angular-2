@@ -2,6 +2,7 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { EmployeesService } from '../service/Employees.service';
+import { Employee } from '../service/employee';
 // tslint:disable-next-line:import-blacklist
 
 
@@ -14,7 +15,7 @@ import { EmployeesService } from '../service/Employees.service';
 export class EmployeeDetailComponent implements OnInit, OnDestroy {
     public _id: number;
     public subscription: Subscription;
-    public employee: any;
+    public employee: Employee;
 
     constructor(private router: Router, private activeteRoute: ActivatedRoute, public employeeService: EmployeesService) {
     }

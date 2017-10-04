@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeesService } from '../service/Employees.service';
 import { AppComponent } from '../app/app.component';
+import { Employee } from '../service/employee';
 
 @Component({
     selector: 'app-employee',
@@ -9,13 +10,14 @@ import { AppComponent } from '../app/app.component';
     providers: [EmployeesService]
 })
 export class EmployeesComponent implements OnInit {
-    public employees: any[];
+    public employees: Employee[];
     public pages: number[];
     public keysearch: string;
     constructor(private employeService: EmployeesService, private aa: AppComponent) {
     }
     ngOnInit(): void {
         this.load();
+        this.pages = [1, 2, 3, 4, 5];
     }
     getID(value) {
         this.aa.layqua = value;
