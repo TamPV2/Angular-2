@@ -1,0 +1,49 @@
+<br/>
+<div class="container">
+    <div class="row main">
+        <div class="main-login main-center">
+            <h5 style="color: red; font-size:50px;"> Edit Employee</h5>
+            <form #formEdit ="ngForm" (ngSubmit) = "Add()" >
+
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="Name" [(ngModel)]="employee.Name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Your Age</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="Age"  [(ngModel)]="employee.age" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Image Url</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="imgUrl" [(ngModel)]="employee.imgUrl" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label  class="cols-sm-2 control-label pull-left">Status</label>
+                    <input type="checkbox" class="cols-sm-10" name="status"   [(ngModel)]="employee.status" /> 
+                </div>
+
+                <div>
+                    <button type="submit" id="button" class="btn btn-primary">Add</button>
+                    <button type="button" id="button" class="btn btn-primary" (click) = "GotoEmployee()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

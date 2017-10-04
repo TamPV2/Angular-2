@@ -15,8 +15,6 @@ export class AppComponent implements OnInit {
   constructor(private router: Router, private loginSErvice: LoginService, private test: TestComponent) {  }
   Logout() {
     this.loginSErvice.SetLogin(false);
-    alert('Con me m tuan anh');
-    this.router.navigate(['/']);
     this.ngOnInit();
   }
   ngOnInit() {

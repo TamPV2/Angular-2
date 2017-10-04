@@ -17,11 +17,14 @@ import {LoginService} from '../service/Login.Service';
 import {CheckLoginGuard} from '../guards/check-login.guard';
 import {CheckLoginSaveGuard} from '../guards/check-login-save.guards';
 import { TestComponent} from '../app/test.component';
+import {EmployeesEditComponent } from '../Employees/Employee-Edit.component';
+import { EmployeesAddComponent } from '../Employees/Employee-Add.component';
 
 @NgModule({
   declarations: [
     AppComponent, EmployeesComponent, HomeComponent, EmployeeDetailComponent, NotFoundComponent,
-    EmployeeOverviewComponent, EmployeeProjectComponent, LoginComponent, TestComponent
+    EmployeeOverviewComponent, EmployeeProjectComponent, LoginComponent, TestComponent,
+    EmployeesEditComponent, EmployeesAddComponent
   ],
   imports: [
     BrowserModule,
